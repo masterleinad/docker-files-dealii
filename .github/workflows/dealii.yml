@@ -22,8 +22,6 @@ jobs:
   build-dealii-docker-ubuntu:
     # Build images for different ubuntu versions on different platforms
 
-    if: github.repository == 'dealii/docker-files'
-
     name: build ${{ matrix.dealii_version }} docker ${{ matrix.ubuntu_version }} ${{ matrix.architecture }}
     runs-on: ${{ matrix.runs-on }}
 
@@ -78,8 +76,6 @@ jobs:
 
   merge:
     # Merge all images for a specific ubuntu version
-
-    if: github.repository == 'dealii/docker-files'
 
     runs-on: ubuntu-24.04
     needs:

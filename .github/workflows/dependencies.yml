@@ -9,7 +9,6 @@ permissions:
 
 jobs:
   build-dependencies:
-    if: (github.repository == 'dealii/docker-files')
     name: dependencies - ${{ matrix.system.ubuntu_version }} - ${{ matrix.arch.tag }}
     runs-on: ${{ matrix.arch.runner }}
 
@@ -64,7 +63,6 @@ jobs:
             dealii/dependencies:${{ matrix.system.tag }}-${{ matrix.arch.tag }}
 
   merge-dependencies:
-    if: (github.repository == 'dealii/docker-files')
     name: dependencies - ${{ matrix.docker }} - ${{ matrix.os }}
     runs-on: ubuntu-latest
     needs: build-dependencies
