@@ -3,7 +3,7 @@ name: dealii
 on:
   schedule:
     - cron: "0 0 * * *"
-  workflow_dispatch:
+  push:
     inputs:
       dealii_version:
         description: 'deal.II version'

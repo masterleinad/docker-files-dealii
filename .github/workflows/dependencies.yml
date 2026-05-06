@@ -1,7 +1,7 @@
 name: dependencies
 
 # this workflow only triggers when manually started
-on: workflow_dispatch
+on: push
 
 permissions:
   contents: read
